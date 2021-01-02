@@ -1,0 +1,3 @@
+{% for client in data.ap %}
+netsh nps add client name= "{{ client.Name }}"  address= {{client.ip_address}} state=Enable sharedsecret={{client.secret}}
+{% endfor %}
